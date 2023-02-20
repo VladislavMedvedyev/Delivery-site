@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body id="app">
     <header class="header">
         <a href="#" class="header__logo">
             <svg width="67" height="36" viewBox="0 0 67 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,15 +166,15 @@
             <svg class="price-section__image" width="316" height="263" viewBox="0 0 316 263" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="./assets/images/sprite.svg#price-image"></use>
             </svg>
-            <div class="price-section__toggler" data-price-section-toggler>
-                <button class="active" data-monthly-button>Monthly</button>
-                <button class="non-active" data-yearly-button>Yearly</button>
+            <div class="price-section__toggler" v-on:click="changePrice">
+                <button  v-bind:class="monthlyButton">Monthly</button>
+                <button v-bind:class="yearlyButton">Yearly</button>
             </div>
             <div class="price-section__subscriptions">
                 <div class="subscriptions__subscriptions-item subscriptions__subscriptions-item_small">
                     <p class="subscriptions-item__name">Basic</p>
                     <p class="subscriptions-item__price">
-                        <span data-monthly-price-basic>$49</span><span class="hidden" data-yearly-price-basic>$490</span> /month
+                        <span :class="{hidden: monthlyPrice}">$49</span><span :class="{hidden: yearlyPrice}">$490</span> /month
                     </p>
                     <ul class="subscriptions-item__info">
                         <li class="info__info-item">
@@ -195,7 +195,7 @@
                 <div class="subscriptions__subscriptions-item">
                     <p class="subscriptions-item__name">Pro</p>
                     <p class="subscriptions-item__price">
-                        <span data-monthly-price-pro>$99</span><span class="hidden" data-yearly-price-pro>$990</span> /month
+                        <span :class="{hidden: monthlyPrice}">$99</span><span :class="{hidden: yearlyPrice}">$990</span> /month
                     </p>
                     <ul class="subscriptions-item__info">
                         <li class="info__info-item">
@@ -223,7 +223,7 @@
                 <div class="subscriptions__subscriptions-item">
                     <p class="subscriptions-item__name">Premium</p>
                     <p class="subscriptions-item__price">
-                        <span data-monthly-price-premium>$128</span><span class="hidden" data-yearly-price-premium>$1280</span> /month
+                        <span :class="{hidden: monthlyPrice}">$128</span><span :class="{hidden: yearlyPrice}">$1280</span> /month
                     </p>
                     <ul class="subscriptions-item__info">
                         <li class="info__info-item">
@@ -275,41 +275,12 @@
                 <use href="./assets/images/sprite.svg#faq-image"></use>
             </svg>
             <div class="faq-section__questions">
-                <div class="questions__questions-item" data-questions-item-1>
+                <div class="questions__questions-item" v-for="(item, index) of faqItems" v-on:click="showItem(index)">
                     <h4 class="questions-item__title">How do i pay for the Basic or Premium plan?</h4>
-                    <span class="questions__questions-item_toggler" data-item-1-toggler-show>+</span>
-                    <span class="hidden" data-item-1-toggler-hide>-</span>
-                    <p class="hidden" data-item-1-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique viverra aliquet lectus morbi suspendisse pellentesque facilisis et. Duis volutpat at iaculis vitae at ut ultricies.</p>
+                    <span class="questions__questions-item_toggler" v-bind:id="index + `plus`">+</span>
+                    <span class="hidden" v-bind:id="index + `minus`">-</span>
+                    <p class="hidden" v-bind:id="index + `text`">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique viverra aliquet lectus morbi suspendisse pellentesque facilisis et. Duis volutpat at iaculis vitae at ut ultricies.</p>
                 </div>
-                <div class="questions__questions-item" data-questions-item-2>
-                    <h4 class="questions-item__title">How do i pay for the Basic or Premium plan?</h4>
-                    <span class="questions__questions-item_toggler" data-item-2-toggler-show>+</span>
-                    <span class="hidden" data-item-2-toggler-hide>-</span>
-                    <p class="hidden" data-item-2-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique viverra aliquet lectus morbi suspendisse pellentesque facilisis et. Duis volutpat at iaculis vitae at ut ultricies.</p>
-                </div>
-                <div class="questions__questions-item" data-questions-item-3>
-                    <h4 class="questions-item__title">How do i pay for the Basic or Premium plan?</h4>
-                    <span class="questions__questions-item_toggler" data-item-3-toggler-show>+</span>
-                    <span class="hidden" data-item-3-toggler-hide>-</span>
-                    <p class="hidden" data-item-3-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique viverra aliquet lectus morbi suspendisse pellentesque facilisis et. Duis volutpat at iaculis vitae at ut ultricies.</p>
-                </div>
-                <div class="questions__questions-item" data-questions-item-4>
-                    <h4 class="questions-item__title">How do i pay for the Basic or Premium plan?</h4>
-                    <span class="questions__questions-item_toggler" data-item-4-toggler-show>+</span>
-                    <span class="hidden" data-item-4-toggler-hide>-</span>
-                    <p class="hidden" data-item-4-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique viverra aliquet lectus morbi suspendisse pellentesque facilisis et. Duis volutpat at iaculis vitae at ut ultricies.</p>
-                </div>
-                <div class="questions__questions-item" data-questions-item-5>
-                    <h4 class="questions-item__title">How do i pay for the Basic or Premium plan?</h4>
-                    <span class="questions__questions-item_toggler" data-item-5-toggler-show>+</span>
-                    <span class="hidden" data-item-5-toggler-hide>-</span>
-                    <p class="hidden" data-item-5-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique viverra aliquet lectus morbi suspendisse pellentesque facilisis et. Duis volutpat at iaculis vitae at ut ultricies.</p>
-                </div>
-            </div>
-            <div class="faq-section__other-questions">
-                <h3 class="other-questions__title">Still have a questions ?</h3>
-                <p class="other-questions__text">if you cannot find answer to your question in our FAQ, you can always conact us. We will answer to you shortly!</p>
-            </div>
         </section>
 
         <section class="main__contact-us-section">
@@ -389,7 +360,7 @@
         </section>
     </footer>
 
-    <script src="./script.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
