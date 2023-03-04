@@ -196,10 +196,20 @@
 <circle cx="273" cy="-86" r="179" fill="#00B871"/>
 </symbol>
 
+<symbol id="services-section-image-small" width="78" height="110" viewBox="0 0 78 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="125" cy="-15" r="125" fill="#2FDF84"/>
+<circle cx="125.229" cy="-14.7705" r="82.1101" fill="#00B871"/>
+</symbol>
+
 
 <symbol id="price-image" width="316" height="263" viewBox="0 0 316 263" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="43.5" cy="-9.5" r="272.5" fill="#2FDF84"/>
 <circle cx="44" cy="-9" r="179" fill="#00B871"/>
+</symbol>
+
+<symbol id="price-image-small" width="74" height="82" viewBox="0 0 74 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="-0.5" cy="7.5" r="74.5" fill="#2FDF84"/>
+<circle cx="-0.363411" cy="7.63671" r="48.9376" fill="#00B871"/>
 </symbol>
 
 <symbol id="popular-icon" width="74" height="20" viewBox="0 0 74 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -211,6 +221,11 @@
 <symbol id="faq-image" width="278" height="165" viewBox="0 0 278 165" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="272.5" cy="-107.5" r="272.5" fill="#2FDF84"/>
 <circle cx="273" cy="-107" r="179" fill="#00B871"/>
+</symbol>
+
+<symbol id="faq-image-small" width="40" height="52" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="39.5" cy="12.5" r="39.5" fill="#2FDF84"/>
+<circle cx="39.5725" cy="12.5725" r="25.9468" fill="#00B871"/>
 </symbol>
 
 <symbol id="facebook" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

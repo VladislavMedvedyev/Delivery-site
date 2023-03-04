@@ -5,7 +5,7 @@ const app = {
             yearlyButton: 'non-active',
             yearlyPrice: true,
             monthlyPrice: false,
-            faqItems: [0, 1, 2, 3, 4, 5, 6],
+            faqItems: [0, 1, 2, 3, 4],
 		}
 	},
 
