@@ -35,6 +35,14 @@ const app = {
             textEl.classList.toggle('hidden');
             textEl.classList.toggle('questions-item__text');
         },
+
+        menuShow() {
+            const burgerMenuEl = document.querySelector('[data-burger-menu]');
+            const burgerMenuIconEl = document.querySelector('[data-burger-menu-icon]');
+            burgerMenuEl.classList.toggle('hidden');
+            burgerMenuEl.classList.toggle('header__menu-small-screen');
+            burgerMenuIconEl.classList.toggle('visible');
+        },
 	}
 }
 

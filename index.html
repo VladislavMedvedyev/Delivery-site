@@ -12,12 +12,37 @@
 </head>
 <body id="app">
     <header class="header">
-        <a href="#" class="header__logo">
-            <svg width="67" height="36" viewBox="0 0 67 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <use href="./assets/images/sprite.svg#logo"></use>
-            </svg>
-        </a>
+        <div class="header_container">
+            <a href="#" class="header__logo">
+                <svg width="67" height="36" viewBox="0 0 67 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use href="./assets/images/sprite.svg#logo"></use>
+                </svg>
+            </a>
+            <div class="header__burger-menu-button" v-on:click="menuShow" data-burger-menu-icon>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         <nav class="header__menu">
+            <ul>
+                <li>
+                    <a class="menu__item" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="menu__item" href="#">Services</a>
+                </li>
+                <li>
+                    <a class="menu__item" href="#">Pricing</a>
+                </li>
+                <li>
+                    <a class="menu__item" href="#">FAQ</a>
+                </li>
+                <li>
+                    <a class="menu__item" href="#">Contact us </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="hidden" data-burger-menu>
             <ul>
                 <li>
                     <a class="menu__item" href="#">Home</a>
